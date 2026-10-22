@@ -1,11 +1,21 @@
-#include<stdio.h>
 
-void Display(int iNo)
+#include <stdio.h>
+
+void DisplayFactor(int iNo)
 {
-    while(iNo > 0)
+    int i = 0;
+
+    if (iNo <= 0)
     {
-        printf("* ");
-        iNo--;
+        return;
+    }
+
+    for (i = 1; i <= iNo / 2; i++)
+    {
+        if ((iNo % i == 0) && (i % 2 == 0))
+        {
+            printf("%d\t", i);
+        }
     }
 }
 
@@ -13,10 +23,10 @@ int main()
 {
     int iValue = 0;
 
-    printf("Enter number : ");
+    printf("Enter a number: ");
     scanf("%d", &iValue);
 
-    Display(iValue);
+    DisplayFactor(iValue);
 
     return 0;
 }

@@ -1,11 +1,18 @@
-void Display(int iNo)
+
+#include <stdio.h>
+
+void PrintEven(int iNo)
 {
     int iCnt = 0;
 
-    while(iCnt < iNo)
+    if (iNo <= 0)
     {
-        printf("* ");
-        iCnt++;
+        return;
+    }
+
+    for (iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        printf("%d\t", iCnt * 2);
     }
 }
 
@@ -13,10 +20,10 @@ int main()
 {
     int iValue = 0;
 
-    printf("Enter number : ");
+    printf("Enter a number: ");
     scanf("%d", &iValue);
 
-    Display(iValue);
+    PrintEven(iValue);
 
     return 0;
 }

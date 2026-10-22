@@ -1,14 +1,13 @@
-
-#include <stdio.h>
-
-#define TRUE 1
-#define FALSE 0
-
 typedef int BOOL;
 
-BOOL ChkEven(int iNo)
+# define TRUE 1
+# define FALSE 0
+
+BOOL ChkVowel ( char cValue )
 {
-    if (iNo % 2 == 0)
+    // Check if the character matches any lowercase or uppercase vowel
+    if(cValue == 'a' || cValue == 'e' || cValue == 'i' || cValue == 'o' || cValue == 'u' ||
+       cValue == 'A' || cValue == 'E' || cValue == 'I' || cValue == 'O' || cValue == 'U')
     {
         return TRUE;
     }
@@ -16,26 +15,4 @@ BOOL ChkEven(int iNo)
     {
         return FALSE;
     }
-}
-
-int main()
-{
-    int iValue = 0;
-    BOOL bRet = FALSE;
-
-    printf("Enter a number: ");
-    scanf("%d", &iValue);
-
-    bRet = ChkEven(iValue);
-
-    if (bRet == TRUE)
-    {
-        printf("%d is an even number\n", iValue);
-    }
-    else
-    {
-        printf("%d is an odd number\n", iValue);
-    }
-
-    return 0;
 }
