@@ -1,19 +1,26 @@
+
 #include <stdio.h>
 
-void Display()
+void Display(int iNo)
 {
-    int i = 0;
-    i = 5;
-    while( i >= 1 )
+    if (iNo < 10)
     {
-        printf("%d\t", i);
-        i--;
+        printf("Hello");
+    }
+    else
+    {
+        printf("Demo");
     }
 }
 
 int main()
 {
-    Display();
+    int iValue = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &iValue);
+
+    Display(iValue);
 
     return 0;
 }

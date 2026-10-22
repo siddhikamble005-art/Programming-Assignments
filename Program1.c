@@ -1,40 +1,22 @@
-#include<stdio.h>
-
-int Divide(int iNo1, int iNo2)
+void Display(int iNo)
 {
-    int iAns = 0;
+    int iCnt = 0;
 
-    if(iNo2 == 0)
+    while(iCnt < iNo)
     {
-        return -1;
+        printf("* ");
+        iCnt++;
     }
-
-    iAns = iNo1 / iNo2;
-
-    return iAns;
 }
 
 int main()
 {
-    int iValue1 = 0, iValue2 = 0;
-    int iRet = 0;
+    int iValue = 0;
 
-    printf("Enter first number: ");
-    scanf("%d", &iValue1);
+    printf("Enter number : ");
+    scanf("%d", &iValue);
 
-    printf("Enter second number: ");
-    scanf("%d", &iValue2);
-
-    iRet = Divide(iValue1, iValue2);
-
-    if(iRet == -1)
-    {
-        printf("Cannot divide by zero\n");
-    }
-    else
-    {
-        printf("Division is: %d\n", iRet);
-    }
+    Display(iValue);
 
     return 0;
 }
